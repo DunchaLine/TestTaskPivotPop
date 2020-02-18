@@ -16,7 +16,7 @@ public class BallMovement : MonoBehaviour
         clockwise = true;
         _angle = -20;
         //_rb = GetComponent<Rigidbody2D>();
-        Time.timeScale = 1.5f;
+        Time.timeScale = 2f;
     }
 
     void Update()
