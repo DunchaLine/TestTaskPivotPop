@@ -108,8 +108,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   objColors:
-  - {fileID: 2100000, guid: cb9144da5d697b74694db278f6667318, type: 2}
   - {fileID: 2100000, guid: acf893136214bc0498fb41e093033dec, type: 2}
   - {fileID: 2100000, guid: d9bd92804d971ab4d9bb2268c877314b, type: 2}
+  - {fileID: 2100000, guid: cb9144da5d697b74694db278f6667318, type: 2}
   - {fileID: 2100000, guid: 18d8c5ed45efa9b43a331c2d90f60756, type: 2}
   - {fileID: 2100000, guid: d1bee62d4f697ab41aa53210bad8283c, type: 2}
