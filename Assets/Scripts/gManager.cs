@@ -9,6 +9,7 @@ public class gManager : MonoBehaviour
     public Text scoreText;
     [HideInInspector]
     public bool isLose;
+    public GameObject restartButton;
     public GameObject loseText;
     public GameObject startText;
     public GameObject winText;
@@ -33,10 +34,7 @@ public class gManager : MonoBehaviour
         if (isLose)
         {
             LoseOrWin(loseText);
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                RestartLvl();
-            }
+            restartButton.SetActive(true);
         }
         if (Score == 2)
         {
