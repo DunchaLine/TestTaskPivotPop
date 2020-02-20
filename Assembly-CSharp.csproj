@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\FiguresMovement.cs" />
      <Compile Include="Assets\Scripts\SpawnLineToChangeColor.cs" />
      <Compile Include="Assets\Scripts\SpawnObj.cs" />
+     <Compile Include="Assets\Scripts\UI.cs" />
      <Compile Include="Assets\Scripts\gManager.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

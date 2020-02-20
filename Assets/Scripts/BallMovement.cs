@@ -19,12 +19,10 @@ public class BallMovement : MonoBehaviour
         ownMaterial = GetComponent<Renderer>().material;
         clockwise = true;
         _angle = -20;
-        Time.timeScale = 2f;
     }
 
     void Update()
     {
-        Debug.Log("SCORE " + manager.Score);
         if (Input.GetMouseButtonDown(0))
         {
             clockwise = !clockwise;
@@ -59,6 +57,15 @@ public class BallMovement : MonoBehaviour
                 Destroy(other.gameObject);
                 manager.Score++;
             }
+            else
+            {
+                manager.isLose = true;
+            }
+        }
+        else if (other.gameObject.tag == "Line")
+        {
+            tmpColor = other.gameObject.GetComponent<Renderer>().material.color;
+            ownMaterial.color = tmpColor;
         }
     }
 }
