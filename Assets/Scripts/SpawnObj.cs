@@ -27,8 +27,7 @@ public class SpawnObj : MonoBehaviour
                 InvokeRepeating("InstantiateObj", 2f, Random.Range(3f, 4f));
             }
         }
-        tmpBool = manager.Line;
-            
+        tmpBool = manager.Line;   
     }
 
     private void InstantiateObj()

@@ -36,7 +36,7 @@ public class gManager : MonoBehaviour
             LoseOrWin(loseText);
             restartButton.SetActive(true);
         }
-        if (Score == 2)
+        if (Score == 10)
         {
             LoseOrWin(winText);
             if (Input.anyKey)
