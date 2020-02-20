@@ -12,7 +12,7 @@ public class SpawnLineToChangeColor : MonoBehaviour
     void Start()
     {
         manager = managerObj.GetComponent<gManager>();
-        coroutine = InstantiateLine(15f);
+        coroutine = InstantiateLine(25f);
         StartCoroutine(coroutine);
     }
 
