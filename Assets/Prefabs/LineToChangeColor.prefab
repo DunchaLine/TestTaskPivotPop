@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ad4301bb6f516b4ba22bc728ddcec8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   objColors:
   - {fileID: 2100000, guid: acf893136214bc0498fb41e093033dec, type: 2}
   - {fileID: 2100000, guid: d9bd92804d971ab4d9bb2268c877314b, type: 2}

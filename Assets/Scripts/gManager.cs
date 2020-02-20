@@ -5,15 +5,12 @@ using UnityEngine;
 public class gManager : MonoBehaviour
 {
     [SerializeField]
-    private bool lineSpawned = true;
+    private bool lineSpawned;
+    private int score;
     void Start()
     {
         Line = false;
-    }
-
-    void Update()
-    {
-        
+        Score = 0;
     }
 
     public bool Line
@@ -25,6 +22,18 @@ public class gManager : MonoBehaviour
         set
         {
             lineSpawned = value;
+        }
+    }
+
+    public int Score
+    {
+        get
+        {
+            return score;
+        }
+        set
+        {
+            score = value;
         }
     }
 }

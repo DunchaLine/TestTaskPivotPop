@@ -12,7 +12,7 @@ public class SpawnLineToChangeColor : MonoBehaviour
     void Start()
     {
         manager = managerObj.GetComponent<gManager>();
-        coroutine = InstantiateLine(30f);
+        coroutine = InstantiateLine(15f);
         StartCoroutine(coroutine);
     }
 
@@ -23,7 +23,7 @@ public class SpawnLineToChangeColor : MonoBehaviour
             yield return new WaitForSeconds(_time);
             tmp = Instantiate(lineToSpawn, transform.position, Quaternion.identity);
             manager.Line = true;
-            Destroy(tmp, 13f);
+            Destroy(tmp, 7f);
         }
     }
 }

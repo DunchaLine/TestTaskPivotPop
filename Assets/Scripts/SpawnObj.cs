@@ -9,47 +9,31 @@ public class SpawnObj : MonoBehaviour
     private gManager manager;
     private IEnumerator coroutine;
     private GameObject tmp;
+    private bool tmpBool;
     void Start()
     {
         manager = managerObj.GetComponent<gManager>();
-        coroutine = InstantiateObj(Random.Range(3f, 4f), manager.Line);
-        StartCoroutine(coroutine);
+        InvokeRepeating("InstantiateObj", 2f, Random.Range(3f, 4f));
     }
 
     void Update()
     {
-        
-        if (manager.Line == true)
+        if (tmpBool)
         {
-            Debug.Log("Stop it now");
-            StopAllCoroutines();
-            coroutine = InstantiateObj(Random.Range(0f, 0f), true);
-            StartCoroutine(coroutine);
+            CancelInvoke();
             if (GameObject.FindGameObjectWithTag("Line") == null)
             {
-                Debug.Log("Now u can continue");
-                StopAllCoroutines();
                 manager.Line = false;
-                coroutine = InstantiateObj(Random.Range(3f, 4f), false);
-                StartCoroutine(coroutine);
+                InvokeRepeating("InstantiateObj", 2f, Random.Range(3f, 4f));
             }
         }
+        tmpBool = manager.Line;
             
     }
 
-    private IEnumerator InstantiateObj(float _time, bool _line)
+    private void InstantiateObj()
     {
-        while (_line == false)
-        {
-            Debug.Log("Or maybe dont stop?");
-            yield return new WaitForSeconds(_time);
-            tmp = Instantiate(objToSpawn[Random.Range(0, objToSpawn.Length)], transform.position, Quaternion.identity) as GameObject;
-            Destroy(tmp, 10f);
-        }
-        while (_line == true)
-        {
-            yield return null;
-            Debug.Log("It must stop right now");
-        }
+        tmp = Instantiate(objToSpawn[Random.Range(0, objToSpawn.Length)], transform.position, Quaternion.identity);
+        Destroy(tmp, 10f);
     }
 }
