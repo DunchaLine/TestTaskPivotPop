@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8845526299774109319}
   - component: {fileID: 4265937989014516796}
   - component: {fileID: 3729015846224397734}
+  - component: {fileID: 1469820167731175724}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -93,3 +94,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1469820167731175724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479179561484278227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b4780ddf6cd644ab972a691426e832, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objToSpawn:
+  - {fileID: 7269419841384599303, guid: d8a6e1b25144020448e6b614a0faf043, type: 3}
+  - {fileID: 1634988678583547417, guid: 5fca8d81c20c01b4f98e02eb7891157e, type: 3}
+  - {fileID: 5133342685159805141, guid: 1208b5a83889f424a847b2dd906b9a22, type: 3}
+  managerObj: {fileID: 5789995757194712563, guid: 2f7640f3c29dbc3489e798af612c6905,
+    type: 3}
