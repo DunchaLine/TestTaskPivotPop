@@ -54,7 +54,7 @@ public class BallMovement : MonoBehaviour
             _tmpColor = other.gameObject.GetComponent<Renderer>().material.color;
             if (_tmpColor == _ownMaterial.color)
             {
-                Destroy(other.gameObject);
+                other.gameObject.SetActive(false);
                 _manager.Score++;
             }
             else

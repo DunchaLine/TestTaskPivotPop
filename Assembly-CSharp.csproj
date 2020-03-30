@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\BallMovement.cs" />
      <Compile Include="Assets\Scripts\FiguresMovement.cs" />
+     <Compile Include="Assets\Scripts\PullObj.cs" />
      <Compile Include="Assets\Scripts\SpawnLineToChangeColor.cs" />
      <Compile Include="Assets\Scripts\SpawnObj.cs" />
      <Compile Include="Assets\Scripts\UI.cs" />
