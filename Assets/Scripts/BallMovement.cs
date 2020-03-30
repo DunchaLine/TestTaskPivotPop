@@ -18,7 +18,7 @@ public class BallMovement : MonoBehaviour
         _manager = managerObj.GetComponent<gManager>();
         _ownMaterial = GetComponent<Renderer>().material;
         clockwise = true;
-        _angle = -20;
+        _angle = -21;
     }
 
     void Update()
