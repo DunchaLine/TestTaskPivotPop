@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8845526299774109319}
   - component: {fileID: 4265937989014516796}
   - component: {fileID: 3729015846224397734}
-  - component: {fileID: 1469820167731175724}
+  - component: {fileID: -7131656145285692982}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -94,7 +94,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1469820167731175724
+--- !u!114 &-7131656145285692982
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -103,12 +103,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1479179561484278227}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3b4780ddf6cd644ab972a691426e832, type: 3}
+  m_Script: {fileID: 11500000, guid: cdf5b784df06b20488132427e7fb60e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objToSpawn:
-  - {fileID: 7269419841384599303, guid: d8a6e1b25144020448e6b614a0faf043, type: 3}
-  - {fileID: 1634988678583547417, guid: 5fca8d81c20c01b4f98e02eb7891157e, type: 3}
+  prefabs:
   - {fileID: 5133342685159805141, guid: 1208b5a83889f424a847b2dd906b9a22, type: 3}
-  managerObj: {fileID: 5789995757194712563, guid: 2f7640f3c29dbc3489e798af612c6905,
-    type: 3}
+  - {fileID: 1634988678583547417, guid: 5fca8d81c20c01b4f98e02eb7891157e, type: 3}
+  - {fileID: 7269419841384599303, guid: d8a6e1b25144020448e6b614a0faf043, type: 3}
+  objColors:
+  - {fileID: 2100000, guid: d9bd92804d971ab4d9bb2268c877314b, type: 2}
+  - {fileID: 2100000, guid: cb9144da5d697b74694db278f6667318, type: 2}
+  - {fileID: 2100000, guid: 18d8c5ed45efa9b43a331c2d90f60756, type: 2}
+  - {fileID: 2100000, guid: acf893136214bc0498fb41e093033dec, type: 2}
+  - {fileID: 2100000, guid: d1bee62d4f697ab41aa53210bad8283c, type: 2}

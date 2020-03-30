@@ -4,18 +4,27 @@ using UnityEngine;
 
 public class FiguresMovement : MonoBehaviour
 {
+    public Camera cam;
     public float speed;
     public Material[] objColors;
-    private Material ownMaterial;
+    private Material _ownMaterial;
 
     void Start()
     {
-        ownMaterial = GetComponent<Renderer>().material;
-        ownMaterial.color = objColors[Random.Range(0, objColors.Length)].color;
+        cam = GetComponent<Camera>();
+        _ownMaterial = GetComponent<Renderer>().material;
+        _ownMaterial.color = objColors[Random.Range(0, objColors.Length)].color;
     }
 
     void Update()
     {
-        transform.Translate(-Vector3.up * speed * Time.deltaTime);
+        if (transform.position.y < -5f)
+        {
+            gameObject.SetActive(false);
+        }
+        if (gameObject.activeInHierarchy)
+        {
+            transform.Translate(-Vector3.up * speed * Time.deltaTime);
+        }
     }
 }

@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class BallMovement : MonoBehaviour
 {
-    public float _radius;
+    public float radius;
     public GameObject managerObj;
     public bool clockwise;
-    public GameObject _center;
-    private gManager manager;
-    private Color tmpColor;
+    public GameObject center;
+    private gManager _manager;
+    private Color _tmpColor;
     [SerializeField]
     private float _angle;
-    private Material ownMaterial;
+    private Material _ownMaterial;
     void Start()
     {
-        manager = managerObj.GetComponent<gManager>();
-        ownMaterial = GetComponent<Renderer>().material;
+        _manager = managerObj.GetComponent<gManager>();
+        _ownMaterial = GetComponent<Renderer>().material;
         clockwise = true;
-        _angle = -20;
+        _angle = -21;
     }
 
     void Update()
@@ -41,31 +41,31 @@ public class BallMovement : MonoBehaviour
     }
     void BallMove(float angle)
     {
-        var x = Mathf.Cos(angle) * _radius;
-        var y = Mathf.Sin(angle) * _radius;
+        var x = Mathf.Cos(angle) * radius;
+        var y = Mathf.Sin(angle) * radius;
         Vector3 _currPos = transform.position;
-        transform.position = (new Vector3(x, y) + _center.transform.position);
+        transform.position = (new Vector3(x, y) + center.transform.position);
     }
 
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "figures")
         {
-            tmpColor = other.gameObject.GetComponent<Renderer>().material.color;
-            if (tmpColor == ownMaterial.color)
+            _tmpColor = other.gameObject.GetComponent<Renderer>().material.color;
+            if (_tmpColor == _ownMaterial.color)
             {
-                Destroy(other.gameObject);
-                manager.Score++;
+                other.gameObject.SetActive(false);
+                _manager.Score++;
             }
             else
             {
-                manager.isLose = true;
+                _manager.isLose = true;
             }
         }
         else if (other.gameObject.tag == "Line")
         {
-            tmpColor = other.gameObject.GetComponent<Renderer>().material.color;
-            ownMaterial.color = tmpColor;
+            _tmpColor = other.gameObject.GetComponent<Renderer>().material.color;
+            _ownMaterial.color = _tmpColor;
         }
     }
 }
