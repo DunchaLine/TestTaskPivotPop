@@ -14,8 +14,8 @@ public class gManager : MonoBehaviour
     public GameObject startText;
     public GameObject winText;
     [SerializeField]
-    private bool lineSpawned;
-    private int score;
+    private bool _lineSpawned;
+    private int _score;
     void Start()
     {
         isLose = false;
@@ -61,11 +61,11 @@ public class gManager : MonoBehaviour
     {
         get
         {
-            return lineSpawned;
+            return _lineSpawned;
         }
         set
         {
-            lineSpawned = value;
+            _lineSpawned = value;
         }
     }
 
@@ -73,12 +73,12 @@ public class gManager : MonoBehaviour
     {
         get
         {
-            return score;
+            return _score;
         }
         set
         {
-            score = value;
-            scoreText.GetComponent<Text>().text = "Score: " + score;
+            _score = value;
+            scoreText.GetComponent<Text>().text = "Score: " + _score;
         }
     }
 }

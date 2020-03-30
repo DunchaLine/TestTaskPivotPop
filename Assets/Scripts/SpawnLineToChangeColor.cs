@@ -6,14 +6,14 @@ public class SpawnLineToChangeColor : MonoBehaviour
 {
     public GameObject lineToSpawn;
     public GameObject managerObj;
-    private gManager manager;
-    private IEnumerator coroutine;
-    private GameObject tmp;
+    private gManager _manager;
+    private IEnumerator _coroutine;
+    private GameObject _tmp;
     void Start()
     {
-        manager = managerObj.GetComponent<gManager>();
-        coroutine = InstantiateLine(25f);
-        StartCoroutine(coroutine);
+        _manager = managerObj.GetComponent<gManager>();
+        _coroutine = InstantiateLine(25f);
+        StartCoroutine(_coroutine);
     }
 
     private IEnumerator InstantiateLine(float _time)
@@ -21,9 +21,9 @@ public class SpawnLineToChangeColor : MonoBehaviour
         while(true)
         {
             yield return new WaitForSeconds(_time);
-            tmp = Instantiate(lineToSpawn, transform.position, Quaternion.identity);
-            manager.Line = true;
-            Destroy(tmp, 7f);
+            _tmp = Instantiate(lineToSpawn, transform.position, Quaternion.identity);
+            _manager.Line = true;
+            Destroy(_tmp, 7f);
         }
     }
 }

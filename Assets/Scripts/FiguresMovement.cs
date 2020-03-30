@@ -6,12 +6,12 @@ public class FiguresMovement : MonoBehaviour
 {
     public float speed;
     public Material[] objColors;
-    private Material ownMaterial;
+    private Material _ownMaterial;
 
     void Start()
     {
-        ownMaterial = GetComponent<Renderer>().material;
-        ownMaterial.color = objColors[Random.Range(0, objColors.Length)].color;
+        _ownMaterial = GetComponent<Renderer>().material;
+        _ownMaterial.color = objColors[Random.Range(0, objColors.Length)].color;
     }
 
     void Update()
