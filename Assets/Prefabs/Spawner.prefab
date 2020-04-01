@@ -116,3 +116,5 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 18d8c5ed45efa9b43a331c2d90f60756, type: 2}
   - {fileID: 2100000, guid: acf893136214bc0498fb41e093033dec, type: 2}
   - {fileID: 2100000, guid: d1bee62d4f697ab41aa53210bad8283c, type: 2}
+  managerObj: {fileID: 5789995757194712563, guid: 2f7640f3c29dbc3489e798af612c6905,
+    type: 3}
