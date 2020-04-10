@@ -18,7 +18,7 @@ public class BallMovement : MonoBehaviour
         _manager = managerObj.GetComponent<gManager>();
         _ownMaterial = GetComponent<Renderer>().material;
         clockwise = true;
-        _angle = -21;
+        _angle = -20;
     }
 
     void Update()
@@ -49,7 +49,7 @@ public class BallMovement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "figures")
+        if (other.gameObject.CompareTag("figures"))
         {
             _tmpColor = other.gameObject.GetComponent<Renderer>().material.color;
             if (_tmpColor == _ownMaterial.color)
@@ -62,7 +62,7 @@ public class BallMovement : MonoBehaviour
                 _manager.isLose = true;
             }
         }
-        else if (other.gameObject.tag == "Line")
+        else if (other.gameObject.CompareTag("Line"))
         {
             _tmpColor = other.gameObject.GetComponent<Renderer>().material.color;
             _ownMaterial.color = _tmpColor;

@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class FiguresMovement : MonoBehaviour
 {
-    public Camera cam;
     public float speed;
     public Material[] objColors;
     private Material _ownMaterial;
 
     void Start()
     {
-        cam = GetComponent<Camera>();
         _ownMaterial = GetComponent<Renderer>().material;
         _ownMaterial.color = objColors[Random.Range(0, objColors.Length)].color;
     }

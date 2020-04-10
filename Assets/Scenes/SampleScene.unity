@@ -1108,7 +1108,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1963946655
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1466,6 +1466,11 @@ PrefabInstance:
       propertyPath: restartButton
       value: 
       objectReference: {fileID: 1989744263}
+    - target: {fileID: 5789995757194712562, guid: 2f7640f3c29dbc3489e798af612c6905,
+        type: 3}
+      propertyPath: scoreBoard
+      value: 
+      objectReference: {fileID: 1394844227}
     - target: {fileID: 5789995757194712563, guid: 2f7640f3c29dbc3489e798af612c6905,
         type: 3}
       propertyPath: m_Name

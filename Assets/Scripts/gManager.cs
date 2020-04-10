@@ -16,6 +16,7 @@ public class gManager : MonoBehaviour
     [SerializeField]
     private bool _lineSpawned;
     private int _score;
+    private int _oldScore = -1;
     void Start()
     {
         isLose = false;
@@ -78,7 +79,12 @@ public class gManager : MonoBehaviour
         set
         {
             _score = value;
-            scoreText.GetComponent<Text>().text = "Score: " + _score;
+            if (_oldScore != _score)
+            {
+                scoreText.GetComponent<Text>().text = "Score: " + _score;
+                _oldScore = _score;
+            }
         }
+
     }
 }
